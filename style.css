@@ -1,0 +1,131 @@
+/* Use a modern, easy-to-read font */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the CTA banner section */
+.cta-banner {
+  background-image: url('img/cta-bg.jpg'); /* Set background image */
+  background-size: cover;                   /* Image covers area without stretching */
+  background-repeat: no-repeat;             /* Do not repeat the image */
+  background-position: center;              /* Center the image */
+  position: relative;                       /* Needed for overlay */
+  color: #1e90a3;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  min-height: 200px;                        /* Banner height stays the same */
+}
+
+/* Light overlay to keep text readable */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(235, 255, 252, 0.8); /* Light teal overlay */
+  z-index: 0; /* Place behind the text */
+}
+
+/* Make sure text appears above the overlay */
+.cta-banner h1,
+.cta-banner p,
+.cta-banner .cta-button {
+  position: relative;
+  z-index: 1;
+}
+
+/* Large main heading */
+.cta-banner h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Short description */
+.cta-banner p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  margin-left:  15px; /* Added left margin */
+  margin-right: 15px; /* Added right margin */
+  color: #1e90a3;
+}
+
+/* Eye-catching CTA button */
+.cta-button {
+  display: inline-block;
+  background-color: #38b6ff; /* Bright blue */
+  color: #fcfcfc;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+  background-color: #88b2b9; /* Slightly darker on hover */
+  color: #e0f7fa;
+}
+
+/* Simple header for the site name */
+.site-header {
+  background-color: #1e90a3;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 12px;      /* Reduced from 20px */
+  padding-bottom: 12px;   /* Reduced from 20px */
+  margin: 0;
+}
+
+/* Style for the site name */
+.site-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+/* Info section below the banner */
+.info-section {
+  width: 80%;
+  margin: 30px auto 0 auto; /* Center the section and add space above */
+  text-align: center;
+}
+
+/* Make image and text appear side by side */
+.info-image {
+  width: 45%;
+  max-width: 300px;
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 5%;
+  border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* Info text column */
+.info-text {
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+/* Heading in info section */
+.info-text h3 {
+  color: #1e90a3;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* Paragraph in info section */
+.info-text p {
+  color: #333333;
+  font-size: 1em;
+  margin-top: 10px;
+}
